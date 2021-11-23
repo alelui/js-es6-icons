@@ -137,17 +137,29 @@ const arrayIcons = [
 // console.log(numberTre);
 
 
-let items = '';
+// let items = '';
 
 const container = document.querySelector('.container');
 
 
-
 for (let i = 0; i < arrayIcons.length; i++){
+
+    cardCreator(i);
+
+}
+
+
+
+
+
+
+////// FUNCTIONS //////
+
+function cardCreator(i){
 
     arrIcon = arrayIcons[i]
     // console.log(arrayIcons[i].name);
-    items +=`
+    container.innerHTML +=`
         <div class="box-icon">
             <div class="icon">
                 <i class="${arrIcon.family} ${arrIcon.prefix + arrIcon.name}"></i>
@@ -157,6 +169,6 @@ for (let i = 0; i < arrayIcons.length; i++){
             </div>
         </div>
     `
-    console.log(arrIcon.prefix + arrIcon.name);
-    container.innerHTML = items;
+    // console.log(arrIcon.prefix + arrIcon.name);
+
 }
