@@ -141,18 +141,22 @@ let items = '';
 
 const container = document.querySelector('.container');
 
+
+
 for (let i = 0; i < arrayIcons.length; i++){
+
+    arrIcon = arrayIcons[i]
     // console.log(arrayIcons[i].name);
     items +=`
         <div class="box-icon">
             <div class="icon">
-                <i class="fas fa-cat"></i>
+                <i class="${arrIcon.family} ${arrIcon.prefix + arrIcon.name}"></i>
             </div>
             <div class="text">
-                <span>Cat</span>
+                <span>${arrIcon.name}</span>
             </div>
         </div>
     `
-    console.log(items);
+    console.log(arrIcon.prefix + arrIcon.name);
     container.innerHTML = items;
 }
