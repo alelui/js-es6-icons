@@ -15,7 +15,20 @@
 
 /* *** HEADER *** */
 
+header #top{
+    height: 50px;
+}
+header #bottom{
+    height: 50px;
+    background-color: #29b1dd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 /* *** MAIN *** */
+
+
 
 /* *** FOOTER *** */
 
