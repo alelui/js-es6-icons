@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 
-.clearfix:after{
+.row:after{
     content: '';
     display: table;
     clear: both;
@@ -17,6 +17,8 @@
 
 header #top{
     height: 50px;
+    color: #29b1dd;
+    font-size: 40px;
 }
 header #bottom{
     height: 50px;
@@ -28,7 +30,27 @@ header #bottom{
 
 /* *** MAIN *** */
 
+main .container{
+    display: flex;
+    justify-content: space-around;
+    background-color: #dddddd;
+    padding: 10px;
+}
 
+.box-icon{
+    width: calc(100% / 5 - 40px);
+    margin: 10px 20px 80px;
+    height: 120px;
+    border-radius: 20px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.box-icon .icon{
+    font-size: 40px;
+}
 
 /* *** FOOTER *** */
 
