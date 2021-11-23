@@ -32,7 +32,8 @@ header #bottom{
 
 main .container{
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: start;
     background-color: #dddddd;
     padding: 10px;
 }
