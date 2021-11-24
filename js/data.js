@@ -176,7 +176,7 @@ function cardCreator(i){
     // console.log(arrIcon.prefix + arrIcon.name);
 
 
-    // Con append e template literal
+    // Con Create elemente ed append
 
     const container = document.querySelector('.container');
     arrIcon = arrayIcons[i]
@@ -190,10 +190,9 @@ function cardCreator(i){
     boxIcon.append(icon);
     icon.innerHTML = `<i class="${arrIcon.family} ${arrIcon.prefix + arrIcon.name}"></i>`
 
-
     const text = document.createElement('div');
     text.classList.add('text');
     boxIcon.append(text);
-    text.innerHTML = `<h3>${arrIcon.name}</h3>`;
+    text.innerHTML = `<h4>${arrIcon.name}</h4>`;
 
 }
