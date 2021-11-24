@@ -137,9 +137,9 @@ const arrayIcons = [
 // console.log(numberTre);
 
 
-// let items = '';
 
-const container = document.querySelector('.container');
+
+
 
 
 for (let i = 0; i < arrayIcons.length; i++){
@@ -157,18 +157,43 @@ for (let i = 0; i < arrayIcons.length; i++){
 
 function cardCreator(i){
 
-    arrIcon = arrayIcons[i]
-    // console.log(arrayIcons[i].name);
-    container.innerHTML +=`
-        <div class="box-icon">
-            <div class="icon">
-                <i class="${arrIcon.family} ${arrIcon.prefix + arrIcon.name}"></i>
-            </div>
-            <div class="text">
-                <span>${arrIcon.name}</span>
-            </div>
-        </div>
-    `
+    // Solo con template literal
+
+    // const container = document.querySelector('.container');
+    // arrIcon = arrayIcons[i]
+    // // console.log(arrayIcons[i].name);
+
+    // container.innerHTML +=`
+    //     <div class="box-icon">
+    //         <div class="icon">
+    //             <i class="${arrIcon.family} ${arrIcon.prefix + arrIcon.name}"></i>
+    //         </div>
+    //         <div class="text">
+    //             <span>${arrIcon.name}</span>
+    //         </div>
+    //     </div>
+    // `
     // console.log(arrIcon.prefix + arrIcon.name);
+
+
+    // Con append e template literal
+
+    const container = document.querySelector('.container');
+    arrIcon = arrayIcons[i]
+
+    const boxIcon =  document.createElement('div');
+    boxIcon.classList.add('box-icon');
+    container.append(boxIcon);
+
+    const icon =  document.createElement('div');
+    icon.classList.add('icon')
+    boxIcon.append(icon);
+    icon.innerHTML = `<i class="${arrIcon.family} ${arrIcon.prefix + arrIcon.name}"></i>`
+
+
+    const text = document.createElement('div');
+    text.classList.add('text');
+    boxIcon.append(text);
+    text.innerHTML = `<h3>${arrIcon.name}</h3>`;
 
 }
